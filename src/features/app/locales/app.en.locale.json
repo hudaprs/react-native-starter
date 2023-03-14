@@ -1,0 +1,59 @@
+{
+	"app": {
+		"welcome": "Welcome To React Native Starter",
+		"recover": "Recover",
+		"your": "Your",
+		"or": "Or",
+		"and": "And",
+		"our": "Our",
+		"limit": "Limit",
+		"logout": "Logout",
+		"locale": {
+			"en": "English",
+			"id": "Indonesia"
+		},
+		"user": {
+			"fullName": "Full Name",
+			"email": "Email",
+			"password": "Password"
+		},
+		"social": {
+			"google": "Google",
+			"facebook": "Facebook"
+		},
+		"status": {
+			"complete": "Complete",
+			"notComplete": "Not Complete"
+		},
+		"table": {
+			"action": "Action"
+		},
+		"action": {
+			"edit": "Edit",
+			"submit": "Submit",
+			"cancel": "Cancel",
+			"update": "Update",
+			"delete": "Delete"
+		},
+		"confirmation": {
+			"areYouSure": "Are You sure?"
+		},
+		"alert": {
+			"logoutSuccess": "You Have Been Successfully Logout"
+		},
+		"error": {
+			"error": "Error",
+			"internalServerError": "Internal Server Error",
+			"badRequest": "Bad Request",
+			"unprocessableEntity": "Unprocessable Entity",
+			"networkDisconnected": "Network Disconnected"
+		},
+		"menu": {
+			"menu": "Menu",
+			"backOffice": "Back Office",
+			"home": "Home",
+			"options": "Options",
+			"todo": "Todo"
+		}
+	}
+}

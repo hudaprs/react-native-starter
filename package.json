@@ -14,18 +14,23 @@
 		"test": "jest",
 		"lint": "eslint './src/**/*.{js,jsx,ts,tsx,json}'",
 		"lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx,json}'",
-		"format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+		"lint:format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
 	},
 	"dependencies": {
 		"@react-native-async-storage/async-storage": "^1.17.11",
+		"@react-navigation/drawer": "^6.6.2",
 		"@react-navigation/native": "^6.1.6",
 		"@react-navigation/native-stack": "^6.9.12",
 		"@reduxjs/toolkit": "^1.9.3",
+		"i18next": "^22.4.11",
 		"native-base": "^3.4.28",
 		"react": "18.2.0",
+		"react-i18next": "^12.2.0",
 		"react-native": "0.71.4",
 		"react-native-dotenv": "^3.4.8",
 		"react-native-flipper": "^0.184.0",
+		"react-native-gesture-handler": "^2.9.0",
+		"react-native-reanimated": "^3.0.2",
 		"react-native-safe-area-context": "^4.5.0",
 		"react-native-screens": "^3.20.0",
 		"react-native-svg": "12.1.1",
@@ -66,7 +71,7 @@
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
 			"yarn lint:fix",
-			"yarn format"
+			"yarn lint:format"
 		]
 	}
 }

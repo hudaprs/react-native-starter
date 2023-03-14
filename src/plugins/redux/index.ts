@@ -30,7 +30,7 @@ import { name as appName } from '../../../package.json'
 import reduxFlipper from 'redux-flipper'
 
 // App Features
-import { emptySplitApi } from '@/features/app'
+import { emptySplitApi } from '@/features/app/redux'
 
 // Persist Config
 const persistConfig = {

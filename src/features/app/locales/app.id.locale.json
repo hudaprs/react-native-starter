@@ -1,0 +1,59 @@
+{
+	"app": {
+		"welcome": "Selamat Datang di React Native Starter",
+		"recover": "Pulihkan",
+		"your": "Anda",
+		"or": "Atau",
+		"and": "Dan",
+		"our": "Kami",
+		"limit": "Limit",
+		"logout": "Keluar",
+		"locale": {
+			"en": "English",
+			"id": "Indonesia"
+		},
+		"user": {
+			"fullName": "Nama Lengkap",
+			"email": "Email",
+			"password": "Kata Sandi"
+		},
+		"social": {
+			"google": "Google",
+			"facebook": "Facebook"
+		},
+		"status": {
+			"complete": "Selesai",
+			"notComplete": "Tidak Selesai"
+		},
+		"table": {
+			"action": "Aksi"
+		},
+		"action": {
+			"edit": "Ubah",
+			"submit": "Kirim",
+			"cancel": "Batal",
+			"update": "Perbaharui",
+			"delete": "Hapus"
+		},
+		"confirmation": {
+			"areYouSure": "Apakah Anda yakin?"
+		},
+		"alert": {
+			"logoutSuccess": "Anda Berhasil Logout"
+		},
+		"error": {
+			"error": "Error",
+			"internalServerError": "Terjadi Kesalahan Di Server",
+			"badRequest": "Terjadi Kesalahan Ketika Melakukan Request",
+			"unprocessableEntity": "Terdapat Kesalahan Dalam Form",
+			"networkDisconnected": "Jaringan Terputus"
+		},
+		"menu": {
+			"menu": "Menu",
+			"backOffice": "Back Office",
+			"home": "Beranda",
+			"options": "Pengaturan",
+			"todo": "Todo"
+		}
+	}
+}

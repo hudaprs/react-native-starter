@@ -12,7 +12,7 @@ This application use:
 - gradle: 7.3.1
 - minSdkVersion: 21 (android >= v5)
 - Visual Studio Code
-- Flipper (have problem when install inside Mac? refer to [References](#references))
+- Flipper 0.184.0 (have problem when install inside Mac? refer to [References](#references))
 
 ---
 
@@ -28,13 +28,17 @@ These are major dependencies that we used for develop:
 
 - [react-native](https://reactnative.dev/) 0.71.4
 - [react](https://reactjs.org/) 18.2.0
-- [react-navigation (stack)](https://reactnavigation.org/docs/getting-started/) ^3.20.0
+- [react-navigation](https://reactnavigation.org/docs/getting-started) ^6.1.6
+- [react-navigation (stack)](https://reactnavigation.org/docs/stack-navigator) ^6.9.12
+- [react-navigation (drawer)](https://reactnavigation.org/docs/drawer-navigator) ^6.6.2
 - [styled-components](https://styled-components.com/) ^5.3.8
 - [native-base](https://docs.nativebase.io/installation) ^3.4.28
 - [redux-toolkit](https://redux-toolkit.js.org/tutorials/quick-start) ^1.9.3
 - [react-redux](https://redux-toolkit.js.org/tutorials/quick-start) ^8.0.5
 - [redux-persist](https://github.com/rt2zz/redux-persist) ^6.0.0
 - [async-storage](https://react-native-async-storage.github.io/async-storage/docs/install/) ^1.17.11
+- [i18n](https://react.i18next.com/getting-started) ^22.4.11
+- [react-i18n](https://react.i18next.com/getting-started) ^12.2.0
 
 ## Dev Dependencies
 

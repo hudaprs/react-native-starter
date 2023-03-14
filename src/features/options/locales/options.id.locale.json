@@ -1,0 +1,10 @@
+{
+	"options": {
+		"form": {
+			"language": "Bahasa"
+		},
+		"formPlaceholder": {
+			"language": "Pilih bahasa"
+		}
+	}
+}

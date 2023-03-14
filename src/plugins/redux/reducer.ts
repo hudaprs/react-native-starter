@@ -11,13 +11,13 @@ import { persistReducer } from 'redux-persist'
 import appReducer from '@/features/app/redux/slice'
 
 // RTK
-import { emptySplitApi } from '@/features/app'
+import { emptySplitApi } from '@/features/app/redux'
 
 // App reducer
 const appPersistConfig = {
 	key: 'app',
 	storage: AsyncStorage,
-	whitelist: ['counter']
+	whitelist: ['language']
 }
 const app = persistReducer(appPersistConfig, appReducer)
 

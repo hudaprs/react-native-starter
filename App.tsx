@@ -1,8 +1,7 @@
+import 'react-native-gesture-handler'
+
 // Native Base
 import { NativeBaseProvider } from 'native-base'
-
-// App Components
-import { AppNavigation } from './src/features/app'
 
 // React Redux
 import { Provider } from 'react-redux'
@@ -16,17 +15,23 @@ import { store, persistor } from '@/plugins'
 // React Navigation
 import { NavigationContainer } from '@react-navigation/native'
 
+// Entry Point
+import { EntryPoint } from '@/EntryPoint'
+
+// Init i18n
+import '@/plugins/i18n'
+
 const App = (): JSX.Element => {
 	return (
-		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
-				<NativeBaseProvider>
+		<NativeBaseProvider>
+			<Provider store={store}>
+				<PersistGate loading={null} persistor={persistor}>
 					<NavigationContainer>
-						<AppNavigation />
+						<EntryPoint />
 					</NavigationContainer>
-				</NativeBaseProvider>
-			</PersistGate>
-		</Provider>
+				</PersistGate>
+			</Provider>
+		</NativeBaseProvider>
 	)
 }
 

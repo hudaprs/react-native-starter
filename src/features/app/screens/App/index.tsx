@@ -5,18 +5,34 @@ import { memo, useCallback } from 'react'
 import {
 	AppWrapper,
 	AppButton,
-	appGetCounter,
 	AppText,
-	AppView,
-	app_HANDLE_COUNTER,
-	IAppSliceHandleCounterTypeEnum
-} from '@/features/app'
+	AppView
+} from '@/features/app/components'
 import { StyledCentered } from './components'
+
+// Redux
+import {
+	app_HANDLE_COUNTER,
+	appGetCounter,
+	IAppSliceHandleCounterTypeEnum
+} from '@/features/app/redux'
 
 // Hooks
 import { useAppDispatch, useAppSelector } from '@/plugins'
 
-const AppEntryPointScreen = memo(() => {
+// React Navigation
+import { useNavigation } from '@react-navigation/native'
+
+// i18n
+import { useTranslation } from 'react-i18next'
+
+const AppScreen = memo(() => {
+	// Translator
+	const { t } = useTranslation()
+
+	// Navigation
+	const navigation = useNavigation()
+
 	// Dispatcher
 	const dispatch = useAppDispatch()
 
@@ -37,6 +53,15 @@ const AppEntryPointScreen = memo(() => {
 		[dispatch]
 	)
 
+	/**
+	 * @description Navigate to home screen
+	 *
+	 * @return {void} void
+	 */
+	const onNavigateToHomeScreen = useCallback((): void => {
+		navigation.navigate('App')
+	}, [navigation])
+
 	return (
 		<AppWrapper>
 			<StyledCentered>
@@ -46,7 +71,14 @@ const AppEntryPointScreen = memo(() => {
 						alignItems: 'center'
 					}}
 				>
-					<AppView flexDirection='row' gap='10px' marginBottom={'20px'}>
+					<AppText>{t('app.welcome')}</AppText>
+
+					<AppView
+						flexDirection='row'
+						gap='10px'
+						marginBottom={'20px'}
+						marginTop={'20px'}
+					>
 						<AppButton
 							onPress={(): void =>
 								onCounter(IAppSliceHandleCounterTypeEnum.INCREASE)
@@ -66,12 +98,16 @@ const AppEntryPointScreen = memo(() => {
 					<AppView>
 						<AppText>{counter}</AppText>
 					</AppView>
+
+					<AppView flexDirection='row' gap='10px' marginTop={'20px'}>
+						<AppButton onPress={onNavigateToHomeScreen}>Go To Home</AppButton>
+					</AppView>
 				</AppView>
 			</StyledCentered>
 		</AppWrapper>
 	)
 })
 
-AppEntryPointScreen.displayName = 'AppEntryPointScreen'
+AppScreen.displayName = 'AppScreen'
 
-export { AppEntryPointScreen }
+export { AppScreen }
