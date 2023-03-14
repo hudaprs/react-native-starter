@@ -1,9 +1,6 @@
 // React
 import { memo } from 'react'
 
-// Native Base
-import { Container } from 'native-base'
-
 // Interfaces
 import { IAppWrapperProps } from './interfaces'
 
@@ -11,11 +8,7 @@ import { IAppWrapperProps } from './interfaces'
 import { StyledSafeAreaView } from './components'
 
 const AppWrapper = memo(({ children }: IAppWrapperProps) => {
-	return (
-		<StyledSafeAreaView>
-			<Container>{children}</Container>
-		</StyledSafeAreaView>
-	)
+	return <StyledSafeAreaView>{children}</StyledSafeAreaView>
 })
 
 AppWrapper.displayName = 'AppWrapper'

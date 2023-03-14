@@ -2,7 +2,7 @@
 import { NativeBaseProvider } from 'native-base'
 
 // App Components
-import { AppEntryPoint } from './src/features/app/ui'
+import { AppNavigation } from './src/features/app'
 
 // React Redux
 import { Provider } from 'react-redux'
@@ -13,12 +13,17 @@ import { PersistGate } from 'redux-persist/integration/react'
 // Store
 import { store, persistor } from '@/plugins'
 
+// React Navigation
+import { NavigationContainer } from '@react-navigation/native'
+
 const App = (): JSX.Element => {
 	return (
 		<Provider store={store}>
 			<PersistGate loading={null} persistor={persistor}>
 				<NativeBaseProvider>
-					<AppEntryPoint />
+					<NavigationContainer>
+						<AppNavigation />
+					</NavigationContainer>
 				</NativeBaseProvider>
 			</PersistGate>
 		</Provider>

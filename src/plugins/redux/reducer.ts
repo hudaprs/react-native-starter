@@ -10,6 +10,9 @@ import { persistReducer } from 'redux-persist'
 // Reducers / Slices
 import appReducer from '@/features/app/redux/slice'
 
+// RTK
+import { emptySplitApi } from '@/features/app'
+
 // App reducer
 const appPersistConfig = {
 	key: 'app',
@@ -19,7 +22,8 @@ const appPersistConfig = {
 const app = persistReducer(appPersistConfig, appReducer)
 
 const rootReducer = combineReducers({
-	app
+	app,
+	[emptySplitApi.reducerPath]: emptySplitApi.reducer
 })
 
 export type IRootState = ReturnType<typeof rootReducer>

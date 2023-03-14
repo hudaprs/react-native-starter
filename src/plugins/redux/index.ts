@@ -26,6 +26,12 @@ import rootReducer, { IRootState } from './reducer'
 // package.json
 import { name as appName } from '../../../package.json'
 
+// Redux Flipper
+import reduxFlipper from 'redux-flipper'
+
+// App Features
+import { emptySplitApi } from '@/features/app'
+
 // Persist Config
 const persistConfig = {
 	key: appName,
@@ -41,12 +47,22 @@ export const listenerMiddleware = createListenerMiddleware()
 // Root Store
 const store = configureStore({
 	reducer: persistedReducer,
-	middleware: getDefaultMiddleware =>
-		getDefaultMiddleware({
+	middleware: getDefaultMiddleware => {
+		const middleware = getDefaultMiddleware({
 			serializableCheck: {
 				ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
 			}
-		}).prepend(listenerMiddleware.middleware)
+		})
+			.prepend(listenerMiddleware.middleware)
+			.concat(emptySplitApi.middleware)
+
+		// Flipper debugger (for development purpose only)
+		if (__DEV__) {
+			middleware.push(reduxFlipper())
+		}
+
+		return middleware
+	}
 })
 
 // Store that persisted
@@ -55,5 +71,4 @@ const persistor = persistStore(store)
 export type IAppDispatch = typeof store.dispatch
 export const useAppDispatch: () => IAppDispatch = useDispatch
 export const useAppSelector: TypedUseSelectorHook<IRootState> = useSelector
-
 export { store, persistor }

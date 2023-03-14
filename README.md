@@ -12,7 +12,7 @@ This application use:
 - gradle: 7.3.1
 - minSdkVersion: 21 (android >= v5)
 - Visual Studio Code
-- Flipper (using mac? refer to [References](#references))
+- Flipper (have problem when install inside Mac? refer to [References](#references))
 
 ---
 

@@ -9,5 +9,4 @@ export enum IAppSliceHandleCounterTypeEnum {
 
 export interface IAppSliceHandleCounterAttrs {
 	type: IAppSliceHandleCounterTypeEnum
-	value: number
 }

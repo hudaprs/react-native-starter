@@ -40,4 +40,7 @@ export const { app_HANDLE_COUNTER } = appSlice.actions
 // Getters
 export const appGetCounter = (state: IRootState): number => state.app.counter
 
+// Interfaces
+export { IAppSliceHandleCounterTypeEnum }
+
 export default appSlice.reducer
