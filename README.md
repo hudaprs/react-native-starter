@@ -148,8 +148,8 @@ yarn test:coverage
 Project structure for this react native starter
 
 ```javascript
-|___mocks__											 	// Contain all mock of the application for test
-|___tests__											 	// Contain all test of the application (inside is the same as the root folder, but ony contain App.test.tsx and src folder)
+|___mocks__ // Contain all mock of the application for test
+|___tests__ // Contain all test of the application (inside is the same as the root folder, but ony contain App.test.tsx and src folder)
 |
 |src                              // Entry point for the app.
 |___assets                        // Assets, images, fonts, styles, etc.
