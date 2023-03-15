@@ -73,40 +73,72 @@ npx pod-install ios
 
 ## Available commands
 
-**Run metro bundler**
+Run metro bundler
 
 ```shell
 yarn start
 ```
 
-**Build iOS (for Mac Only)**
+Build iOS (for Mac Only)
 
 ```shell
 yarn ios
 ```
 
-**Build Android**
+Build Android
 
 ```shell
 yarn android
 ```
 
-**Run linter and will search for problems, but will not fix**
+---
+
+## Available commands for linting
+
+Run linter and will search for problems, but will not fix
 
 ```shell
 yarn lint
 ```
 
-**Run linter and will search and try to fix the problems.**
+Run linter and will search and try to fix the problems.
 
 ```shell
 yarn lint:fix
 ```
 
-**Run linter and will call prettier to fix the code style.**
+Run linter and will call prettier to fix the code style.
 
 ```shell
 yarn lint:format
+```
+
+---
+
+## Available commands for testing
+
+It will go through all the test files and execute them. This command will also be used in pre-hooks and CI checks.
+
+```shell
+yarn test
+```
+
+This will watch all the test files. It is very useful while writing tests and quickly seeing results.
+
+```shell
+yarn test:watch
+```
+
+This command will update snapshots for all the presentational components. If the snapshot is not there, it will create it for you. We will discuss snapshots in detail in coming chapters.
+
+```shell
+yarn test:update
+```
+
+As the name suggests, this command will generate a coverage report.
+
+```shell
+yarn test:coverage
 ```
 
 ---
@@ -116,10 +148,10 @@ yarn lint:format
 Project structure for this react native starter
 
 ```javascript
-config                            // Contain config of project, but not related to client (development only).
-|___jest                          // All config about jest / testing of this project.
+|___mocks__											 // Contain all mock of the application for test
+|___tests__											 // Contain all test of the application (inside is the same as the root folder, but ony contain App.test.tsx and src folder)
 |
-src                               // Entry point for the app.
+|src                               // Entry point for the app.
 |___assets                        // Assets, images, fonts, styles, etc.
 |   |______images
 |   |____________icon             // Contain icon for the project
@@ -132,14 +164,16 @@ src                               // Entry point for the app.
 |   |____________components       // Contain components
 |   |____________constants        // Contain static value / constant
 |   |____________hooks            // Contain custom hooks
-|   |____________locale           // Contain localization
+|   |____________locales          // Contain localization
 |   |____________redux            // Contain redux / state management
 |   |____________navigation       // Contain routing, according feature
 |   |____________ui               // Contain UI / View for the app
 |   |____________utils            // Contain utility that reusable for another component or it-self
-|   |____________{another}        // Another folder for specific action
+|   |
+|   |______test        						// Contain all about test, especially setup for jest
 |   |
 |   |______{another}              // Another features, the content same as above.
+|
 ```
 
 If you want to create folder outside declared above, you can create, but, don't forget to update this docs.
@@ -391,3 +425,4 @@ These are some references when we build this starter:
 - [Force return type in function](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
 - [Flipper cannot be opened in Mac](https://stackoverflow.com/questions/61182996/flipper-cannot-be-opened-because-the-developer-cannot-be-verified-in-macos-catal)
 - [Debug React Native with Flipper](https://javascript.plainenglish.io/how-to-debug-redux-in-react-native-using-flipper-d785b46cf7bf)
+- [React Native jest setup](https://www.reactnative.guide/7-testing/7.1-jest-setup.html)

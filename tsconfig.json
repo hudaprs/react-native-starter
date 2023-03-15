@@ -2,7 +2,8 @@
 	"extends": "@tsconfig/react-native/tsconfig.json",
 	"compilerOptions": {
 		"baseUrl": "./",
-		"paths": { "@/*": ["./src/*"] }
+		"paths": { "@/*": ["./src/*"] },
+		"typeRoots": ["./types"]
 	},
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "src/test", "__tests__", "__mocks__"]
 }

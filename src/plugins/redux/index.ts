@@ -32,6 +32,9 @@ import reduxFlipper from 'redux-flipper'
 // App Features
 import { emptySplitApi } from '@/features/app/redux'
 
+// Env
+import { NODE_ENV } from '@env'
+
 // Persist Config
 const persistConfig = {
 	key: appName,
@@ -57,7 +60,7 @@ const store = configureStore({
 			.concat(emptySplitApi.middleware)
 
 		// Flipper debugger (for development purpose only)
-		if (__DEV__) {
+		if (NODE_ENV !== 'test' && NODE_ENV === 'development') {
 			middleware.push(reduxFlipper())
 		}
 

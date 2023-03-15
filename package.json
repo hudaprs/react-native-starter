@@ -11,10 +11,13 @@
 		"android": "react-native run-android",
 		"ios": "react-native run-ios",
 		"start": "react-native start --reset-cache",
-		"test": "jest",
 		"lint": "eslint './src/**/*.{js,jsx,ts,tsx,json}'",
 		"lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx,json}'",
-		"lint:format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+		"lint:format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+		"test": "jest --verbose --coverage",
+		"test:update": "jest --verbose --coverage --updateSnapshot",
+		"test:watch": "jest --verbose --watch",
+		"test:coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
 	},
 	"dependencies": {
 		"@react-native-async-storage/async-storage": "^1.17.11",
@@ -36,7 +39,8 @@
 		"react-native-svg": "12.1.1",
 		"react-redux": "^8.0.5",
 		"redux-persist": "^6.0.0",
-		"styled-components": "^5.3.8"
+		"styled-components": "^5.3.8",
+		"whatwg-fetch": "^3.6.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.0",
@@ -66,7 +70,26 @@
 		"typescript": "4.8.4"
 	},
 	"jest": {
-		"preset": "react-native"
+		"preset": "react-native",
+		"cacheDirectory": "./cache",
+		"coverageThreshold": {
+			"global": {
+				"statements": 80
+			}
+		},
+		"collectCoverageFrom": [
+			"src/**/*.tsx",
+			"!src/plugins/**/*.ts"
+		],
+		"transformIgnorePatterns": [
+			"/node_modules/(?!(@react-native|react-native|react-native-reanimated|redux-persist|@react-navigation/.*)/).*/"
+		],
+		"modulePathIgnorePatterns": [
+			"<rootDir>/src/plugins"
+		],
+		"setupFilesAfterEnv": [
+			"./src/test/setup.ts"
+		]
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
