@@ -2,16 +2,21 @@
 import { memo } from 'react'
 
 // Components
-import { AppContainer, AppWrapper } from '@/features/app/components'
+import { AppContainer, AppWrapper, AppButton } from '@/features/app/components'
 
 // Native Base
-import { FormControl, Select, CheckIcon } from 'native-base'
+import { FormControl, Select, CheckIcon, Row, Column } from 'native-base'
 
 // i18n
 import { useTranslation } from 'react-i18next'
 
 // Constants
-import { APP_LANGUAGE, APP_LANGUAGE_LIST } from '@/features/app/constants'
+import {
+	APP_LANGUAGE,
+	APP_LANGUAGE_LIST,
+	APP_STACK_NAVIGATION,
+	APP_DRAWER_NAVIGATION
+} from '@/features/app/constants'
 
 // Plugins
 import { useAppSelector, useAppDispatch } from '@/plugins'
@@ -19,7 +24,10 @@ import { useAppSelector, useAppDispatch } from '@/plugins'
 // Redux
 import { appGetLanguage, app_HANDLE_LANGUAGE } from '@/features/app/redux'
 
-const OptionScreen = memo(() => {
+// Interfaces
+import { TOptionProps } from './interfaces'
+
+const OptionScreen = memo(({ navigation }: TOptionProps) => {
 	// Translation
 	const { t } = useTranslation()
 
@@ -57,6 +65,27 @@ const OptionScreen = memo(() => {
 						))}
 					</Select>
 				</FormControl>
+
+				<Row marginTop={'20px'} justifyContent={'space-between'} space={3}>
+					<Column w='1/2'>
+						<AppButton
+							onPress={(): void =>
+								navigation.navigate(APP_STACK_NAVIGATION.APP_ENTRY_POINT)
+							}
+						>
+							Go To Entry Point
+						</AppButton>
+					</Column>
+					<Column w='1/2'>
+						<AppButton
+							onPress={(): void =>
+								navigation.navigate(APP_DRAWER_NAVIGATION.HOME_PARENT)
+							}
+						>
+							Go To Home
+						</AppButton>
+					</Column>
+				</Row>
 			</AppContainer>
 		</AppWrapper>
 	)

@@ -1,7 +1,7 @@
 // Interfaces
 import {
 	IAppSliceHandleCounterAttrs,
-	IAppSliceHandleCounterTypeEnum,
+	EAppSliceHandleCounterType,
 	IAppSliceState
 } from './interfaces'
 
@@ -30,11 +30,11 @@ const appSlice = createSlice({
 			state,
 			{ payload }: PayloadAction<IAppSliceHandleCounterAttrs>
 		): void => {
-			if (payload.type === IAppSliceHandleCounterTypeEnum.INCREASE) {
+			if (payload.type === EAppSliceHandleCounterType.INCREASE) {
 				state.counter = state.counter += 1
 			}
 
-			if (payload.type === IAppSliceHandleCounterTypeEnum.DECREASE) {
+			if (payload.type === EAppSliceHandleCounterType.DECREASE) {
 				state.counter = state.counter -= 1
 			}
 		},

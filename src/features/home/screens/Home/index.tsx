@@ -2,12 +2,52 @@
 import { memo } from 'react'
 
 // Components
-import { AppWrapper, AppText } from '@/features/app/components'
+import {
+	AppWrapper,
+	AppText,
+	AppButton,
+	AppContainer
+} from '@/features/app/components'
 
-const HomeScreen = memo(() => {
+// Interfaces
+import { THomeProps } from './interfaces'
+
+// Native Base
+import { Row, Column } from 'native-base'
+
+// Constants
+import {
+	APP_DRAWER_NAVIGATION,
+	APP_STACK_NAVIGATION
+} from '@/features/app/constants'
+
+const HomeScreen = memo(({ navigation }: THomeProps) => {
 	return (
 		<AppWrapper>
-			<AppText>This is home</AppText>
+			<AppContainer>
+				<AppText>This is home</AppText>
+
+				<Row marginTop={'20px'} justifyContent={'space-between'} space={3}>
+					<Column w='1/2'>
+						<AppButton
+							onPress={(): void =>
+								navigation.navigate(APP_STACK_NAVIGATION.APP_ENTRY_POINT)
+							}
+						>
+							Go To Entry Point
+						</AppButton>
+					</Column>
+					<Column w='1/2'>
+						<AppButton
+							onPress={(): void =>
+								navigation.navigate(APP_DRAWER_NAVIGATION.OPTION_PARENT)
+							}
+						>
+							Go To Option
+						</AppButton>
+					</Column>
+				</Row>
+			</AppContainer>
 		</AppWrapper>
 	)
 })

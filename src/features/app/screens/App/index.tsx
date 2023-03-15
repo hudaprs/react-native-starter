@@ -14,24 +14,24 @@ import { StyledCentered } from './components'
 import {
 	app_HANDLE_COUNTER,
 	appGetCounter,
-	IAppSliceHandleCounterTypeEnum
+	EAppSliceHandleCounterType
 } from '@/features/app/redux'
 
 // Hooks
 import { useAppDispatch, useAppSelector } from '@/plugins'
 
-// React Navigation
-import { useNavigation } from '@react-navigation/native'
-
 // i18n
 import { useTranslation } from 'react-i18next'
 
-const AppScreen = memo(() => {
+// Interfaces
+import { TAppProps } from './interfaces'
+
+// Constants
+import { APP_STACK_NAVIGATION } from '@/features/app/constants'
+
+const AppScreen = memo(({ navigation }: TAppProps) => {
 	// Translator
 	const { t } = useTranslation()
-
-	// Navigation
-	const navigation = useNavigation()
 
 	// Dispatcher
 	const dispatch = useAppDispatch()
@@ -42,12 +42,12 @@ const AppScreen = memo(() => {
 	/**
 	 * @description Counter handler
 	 *
-	 * @param {IAppSliceHandleCounterTypeEnum} type
+	 * @param {EAppSliceHandleCounterType} type
 	 *
 	 * @return {void} void
 	 */
 	const onCounter = useCallback(
-		(type: IAppSliceHandleCounterTypeEnum): void => {
+		(type: EAppSliceHandleCounterType): void => {
 			dispatch(app_HANDLE_COUNTER({ type }))
 		},
 		[dispatch]
@@ -59,7 +59,7 @@ const AppScreen = memo(() => {
 	 * @return {void} void
 	 */
 	const onNavigateToHomeScreen = useCallback((): void => {
-		navigation.navigate('App')
+		navigation.navigate(APP_STACK_NAVIGATION.APP)
 	}, [navigation])
 
 	return (
@@ -81,14 +81,14 @@ const AppScreen = memo(() => {
 					>
 						<AppButton
 							onPress={(): void =>
-								onCounter(IAppSliceHandleCounterTypeEnum.INCREASE)
+								onCounter(EAppSliceHandleCounterType.INCREASE)
 							}
 						>
 							Increase
 						</AppButton>
 						<AppButton
 							onPress={(): void =>
-								onCounter(IAppSliceHandleCounterTypeEnum.DECREASE)
+								onCounter(EAppSliceHandleCounterType.DECREASE)
 							}
 						>
 							Decrease

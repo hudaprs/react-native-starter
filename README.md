@@ -130,9 +130,8 @@ src                               // Entry point for the app.
 |___features                      // Contain all of your features
 |   |______app                    // Core of feature in the project, usually contain reusable API.
 |   |____________components       // Contain components
-|   |____________constant         // Contain static value / constant
+|   |____________constants        // Contain static value / constant
 |   |____________hooks            // Contain custom hooks
-|   |____________interfaces       // Contain interfaces
 |   |____________locale           // Contain localization
 |   |____________redux            // Contain redux / state management
 |   |____________navigation       // Contain routing, according feature

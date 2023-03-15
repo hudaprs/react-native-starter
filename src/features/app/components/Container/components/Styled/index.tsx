@@ -8,6 +8,7 @@ import { View } from 'react-native'
 import { IAppContainerProps } from '@/features/app/components/Container/interfaces'
 
 export const StyledView = styled(View)<IAppContainerProps>`
+	height: 100%;
 	flex-direction: ${(props): string => props?.flexDirection || 'column'};
 	gap: ${(props): string => props?.gap || '0px'};
 	margin-bottom: ${(props): string => props?.marginBottom || '0px'};
