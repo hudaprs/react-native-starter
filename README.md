@@ -106,7 +106,7 @@ yarn lint:fix
 **Run linter and will call prettier to fix the code style.**
 
 ```shell
-yarn format
+yarn lint:format
 ```
 
 ---
