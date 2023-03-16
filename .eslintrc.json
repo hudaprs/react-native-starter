@@ -37,21 +37,8 @@
 
 		// Hook
 		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn",
-
-		// Func Return Type
-		// disable the rule for all files
-		"@typescript-eslint/explicit-function-return-type": "off"
+		"react-hooks/exhaustive-deps": "warn"
 	},
-	"overrides": [
-		{
-			// enable the rule specifically for TypeScript files
-			"files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
-			"rules": {
-				"@typescript-eslint/explicit-function-return-type": "error"
-			}
-		}
-	],
 	"settings": {
 		"react": {
 			"version": "detect"

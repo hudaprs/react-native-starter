@@ -3,7 +3,8 @@
 	"compilerOptions": {
 		"baseUrl": "./",
 		"paths": { "@/*": ["./src/*"] },
-		"typeRoots": ["./types"]
+		"typeRoots": ["./types"],
+		"types": ["styled-components-react-native"]
 	},
 	"exclude": ["node_modules", "src/test", "__tests__", "__mocks__"]
 }
