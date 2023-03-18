@@ -155,9 +155,8 @@ Project structure for this react native starter
 |___assets                        // Assets, images, fonts, styles, etc.
 |   |______images
 |   |____________icon             // Contain icon for the project
-|   |____________{another}
-|   |______styles
-|   |______fonts
+|   |____________{another}        // Another related to images
+|   |______fonts                  // Contain fonts that used inside the project
 |
 |___features                      // Contain all of your features
 |   |______app                    // Core of feature in the project, usually contain reusable API.

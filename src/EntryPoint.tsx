@@ -11,7 +11,11 @@ import { StatusBar } from 'react-native'
 import { useAppDispatch, useAppSelector } from './plugins'
 
 // Redux
-import { appGetLanguage, app_HANDLE_LANGUAGE } from './features/app/redux'
+import {
+	appGetLanguage,
+	app_HANDLE_LANGUAGE,
+	app_HANDLE_INITIALIZE
+} from './features/app/redux'
 
 const EntryPoint = (): JSX.Element => {
 	// Dispatcher
@@ -26,6 +30,16 @@ const EntryPoint = (): JSX.Element => {
 
 		// eslint-disable-next-line
 	}, [])
+
+	// Handle any async request before opening the app
+	useEffect(() => {
+		// Note: You have async request in here?
+		dispatch(app_HANDLE_INITIALIZE(false))
+
+		setTimeout(() => {
+			dispatch(app_HANDLE_INITIALIZE(true))
+		}, 3000)
+	}, [dispatch])
 
 	return (
 		<>

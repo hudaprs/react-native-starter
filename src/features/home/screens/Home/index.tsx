@@ -31,7 +31,7 @@ const HomeScreen = memo(({ navigation }: THomeProps) => {
 					<Column w='1/2'>
 						<AppButton
 							onPress={(): void =>
-								navigation.navigate(APP_STACK_NAVIGATION.APP_ENTRY_POINT)
+								navigation.navigate(APP_STACK_NAVIGATION.ENTRY_POINT)
 							}
 						>
 							Go To Entry Point

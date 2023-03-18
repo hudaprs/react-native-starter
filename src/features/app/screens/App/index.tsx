@@ -37,7 +37,7 @@ const AppScreen = memo(({ navigation }: TAppProps) => {
 	const dispatch = useAppDispatch()
 
 	// Selector
-	const counter = useAppSelector(appGetCounter)
+	const appCounter = useAppSelector(appGetCounter)
 
 	/**
 	 * @description Counter handler
@@ -96,7 +96,7 @@ const AppScreen = memo(({ navigation }: TAppProps) => {
 					</AppView>
 
 					<AppView>
-						<AppText>{counter}</AppText>
+						<AppText>{appCounter}</AppText>
 					</AppView>
 
 					<AppView flexDirection='row' gap='10px' marginTop={'20px'}>

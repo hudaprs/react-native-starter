@@ -9,5 +9,5 @@ import { APP_STACK_NAVIGATION } from '@/features/app/constants'
 
 export type TAppProps = NativeStackScreenProps<
 	TAppRootStackNavigationParams,
-	APP_STACK_NAVIGATION.APP_ENTRY_POINT
+	APP_STACK_NAVIGATION.ENTRY_POINT
 >

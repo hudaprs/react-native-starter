@@ -2,6 +2,7 @@
 import { APP_LANGUAGE } from '@/features/app/constants'
 
 export interface IAppSliceState {
+	isInitialized: boolean
 	counter: number
 	language: APP_LANGUAGE
 }

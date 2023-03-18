@@ -1,5 +1,6 @@
 export enum APP_STACK_NAVIGATION {
-	APP_ENTRY_POINT = 'AppEntryPoint',
+	SPLASH = 'Splash',
+	ENTRY_POINT = 'AppEntryPoint',
 	APP = 'App'
 }
 

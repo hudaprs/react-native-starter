@@ -18,6 +18,7 @@ import { APP_LANGUAGE } from '@/features/app/constants'
 import i18n from 'i18next'
 
 const initialState: IAppSliceState = {
+	isInitialized: false,
 	counter: 0,
 	language: APP_LANGUAGE.EN
 }
@@ -44,16 +45,26 @@ const appSlice = createSlice({
 		): void => {
 			state.language = payload
 			i18n.changeLanguage(payload)
+		},
+		app_HANDLE_INITIALIZE: (
+			state,
+			{ payload }: PayloadAction<boolean>
+		): void => {
+			state.isInitialized = payload
 		}
 	}
 })
 
 // Actions / Mutations
-export const { app_HANDLE_COUNTER, app_HANDLE_LANGUAGE } = appSlice.actions
+export const {
+	app_HANDLE_COUNTER,
+	app_HANDLE_LANGUAGE,
+	app_HANDLE_INITIALIZE
+} = appSlice.actions
 
 // Getters
-export const appGetCounter = (state: IRootState): number => state.app.counter
-export const appGetLanguage = (state: IRootState): APP_LANGUAGE =>
-	state.app.language
+export const appGetInitialized = (state: IRootState) => state.app.isInitialized
+export const appGetCounter = (state: IRootState) => state.app.counter
+export const appGetLanguage = (state: IRootState) => state.app.language
 
 export default appSlice.reducer
