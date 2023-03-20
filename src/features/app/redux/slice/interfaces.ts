@@ -1,10 +1,10 @@
 // App Features
-import { APP_LANGUAGE } from '@/features/app/constants'
+import { E_APP_LANGUAGE } from '@/features/app/constants'
 
 export interface IAppSliceState {
 	isInitialized: boolean
 	counter: number
-	language: APP_LANGUAGE
+	language: E_APP_LANGUAGE
 }
 
 export enum EAppSliceHandleCounterType {

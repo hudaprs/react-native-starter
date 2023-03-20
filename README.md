@@ -32,7 +32,7 @@ These are major dependencies that we used for develop:
 - [react-navigation (stack)](https://reactnavigation.org/docs/stack-navigator) ^6.9.12
 - [react-navigation (drawer)](https://reactnavigation.org/docs/drawer-navigator) ^6.6.2
 - [styled-components](https://styled-components.com/) ^5.3.8
-- [native-base](https://docs.nativebase.io/installation) ^3.4.28
+- [react-native-paper](https://reactnativepaper.com/) ^5.4.1
 - [redux-toolkit](https://redux-toolkit.js.org/tutorials/quick-start) ^1.9.3
 - [react-redux](https://redux-toolkit.js.org/tutorials/quick-start) ^8.0.5
 - [redux-persist](https://github.com/rt2zz/redux-persist) ^6.0.0
@@ -71,7 +71,7 @@ npx pod-install ios
 
 ---
 
-## Available commands
+## Available commands for build
 
 Run metro bundler
 
@@ -89,6 +89,14 @@ Build Android
 
 ```shell
 yarn android
+```
+
+---
+
+## Available commands for link assets
+
+```shell
+yarn link
 ```
 
 ---

@@ -1,4 +1,4 @@
-export enum APP_LANGUAGE {
+export enum E_APP_LANGUAGE {
 	EN = 'en',
 	ID = 'id'
 }
@@ -6,10 +6,10 @@ export enum APP_LANGUAGE {
 export const APP_LANGUAGE_LIST = [
 	{
 		text: 'Indonesia',
-		value: APP_LANGUAGE.ID
+		value: E_APP_LANGUAGE.ID
 	},
 	{
 		text: 'English',
-		value: APP_LANGUAGE.EN
+		value: E_APP_LANGUAGE.EN
 	}
 ]

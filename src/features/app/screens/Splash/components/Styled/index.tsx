@@ -16,7 +16,6 @@ export const StyledCentered = styled(View)`
 
 export const StyledFooter = styled(View)`
 	width: 100%;
-
 	height: auto;
 	display: flex;
 	flex-direction: column;

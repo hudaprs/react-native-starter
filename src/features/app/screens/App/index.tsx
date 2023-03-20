@@ -27,7 +27,7 @@ import { useTranslation } from 'react-i18next'
 import { TAppProps } from './interfaces'
 
 // Constants
-import { APP_STACK_NAVIGATION } from '@/features/app/constants'
+import { E_APP_STACK_NAVIGATION } from '@/features/app/constants'
 
 const AppScreen = memo(({ navigation }: TAppProps) => {
 	// Translator
@@ -59,7 +59,7 @@ const AppScreen = memo(({ navigation }: TAppProps) => {
 	 * @return {void} void
 	 */
 	const onNavigateToHomeScreen = useCallback((): void => {
-		navigation.navigate(APP_STACK_NAVIGATION.APP)
+		navigation.navigate(E_APP_STACK_NAVIGATION.APP)
 	}, [navigation])
 
 	return (

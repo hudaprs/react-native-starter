@@ -5,9 +5,9 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { TAppRootStackNavigationParams } from '@/features/app/navigations'
 
 // Constants
-import { APP_STACK_NAVIGATION } from '@/features/app/constants'
+import { E_APP_STACK_NAVIGATION } from '@/features/app/constants'
 
 export type TAppProps = NativeStackScreenProps<
 	TAppRootStackNavigationParams,
-	APP_STACK_NAVIGATION.ENTRY_POINT
+	E_APP_STACK_NAVIGATION.ENTRY_POINT
 >

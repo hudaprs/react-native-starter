@@ -4,7 +4,7 @@ import { DrawerScreenProps } from '@react-navigation/drawer'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 // Constants
-import { OPTION_STACK_NAVIGATION } from '@/features/app/constants'
+import { E_OPTION_STACK_NAVIGATION } from '@/features/app/constants'
 
 // Navigation
 import { TOptionStackNavigationParams } from '@/features/options/navigations'
@@ -16,7 +16,7 @@ import {
 export type TOptionProps = CompositeScreenProps<
 	NativeStackScreenProps<
 		TOptionStackNavigationParams,
-		OPTION_STACK_NAVIGATION.OPTION
+		E_OPTION_STACK_NAVIGATION.OPTION
 	>,
 	CompositeScreenProps<
 		NativeStackScreenProps<TAppRootStackNavigationParams>,

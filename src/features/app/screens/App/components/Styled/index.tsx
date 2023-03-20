@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 
 // React Native
-import { View } from 'native-base'
+import { View } from 'react-native'
 
 export const StyledCentered = styled(View)`
 	height: 100%;

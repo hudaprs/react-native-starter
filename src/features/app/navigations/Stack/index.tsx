@@ -11,7 +11,7 @@ import { AppScreen, AppSplashScreen } from '@/features/app/screens'
 import { TAppRootStackNavigationParams } from './interfaces'
 
 // Constants
-import { APP_STACK_NAVIGATION } from '@/features/app/constants'
+import { E_APP_STACK_NAVIGATION } from '@/features/app/constants'
 
 // Plugins
 import { useAppSelector } from '@/plugins'
@@ -28,15 +28,15 @@ const AppRootStackNavigation = (): JSX.Element => {
 		<Stack.Navigator
 			initialRouteName={
 				appIsInitialized
-					? APP_STACK_NAVIGATION.ENTRY_POINT
-					: APP_STACK_NAVIGATION.SPLASH
+					? E_APP_STACK_NAVIGATION.ENTRY_POINT
+					: E_APP_STACK_NAVIGATION.SPLASH
 			}
 			screenOptions={{ headerShown: false }}
 		>
 			{/* Check if app not initialized */}
 			{!appIsInitialized && (
 				<Stack.Screen
-					name={APP_STACK_NAVIGATION.SPLASH}
+					name={E_APP_STACK_NAVIGATION.SPLASH}
 					component={AppSplashScreen}
 				/>
 			)}
@@ -45,11 +45,11 @@ const AppRootStackNavigation = (): JSX.Element => {
 			{appIsInitialized && (
 				<>
 					<Stack.Screen
-						name={APP_STACK_NAVIGATION.ENTRY_POINT}
+						name={E_APP_STACK_NAVIGATION.ENTRY_POINT}
 						component={AppScreen}
 					/>
 					<Stack.Screen
-						name={APP_STACK_NAVIGATION.APP}
+						name={E_APP_STACK_NAVIGATION.APP}
 						component={AppDrawerNavigation}
 					/>
 				</>

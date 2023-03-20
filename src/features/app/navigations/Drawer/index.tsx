@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next'
 import { TAppDrawerNavigationParams } from './interfaces'
 
 // Constants
-import { APP_DRAWER_NAVIGATION } from '@/features/app/constants'
+import { E_APP_DRAWER_NAVIGATION } from '@/features/app/constants'
 
 const Drawer = createDrawerNavigator<TAppDrawerNavigationParams>()
 const AppDrawerNavigation = (): JSX.Element => {
@@ -24,12 +24,12 @@ const AppDrawerNavigation = (): JSX.Element => {
 	return (
 		<Drawer.Navigator>
 			<Drawer.Screen
-				name={APP_DRAWER_NAVIGATION.HOME_PARENT}
+				name={E_APP_DRAWER_NAVIGATION.HOME_PARENT}
 				component={HomeStackNavigation}
 				options={{ title: t('app.menu.home') as string }}
 			/>
 			<Drawer.Screen
-				name={APP_DRAWER_NAVIGATION.OPTION_PARENT}
+				name={E_APP_DRAWER_NAVIGATION.OPTION_PARENT}
 				component={OptionStackNavigation}
 				options={{ title: t('app.menu.options') as string }}
 			/>

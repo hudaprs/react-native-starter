@@ -17,8 +17,8 @@ import { Row, Column } from 'native-base'
 
 // Constants
 import {
-	APP_DRAWER_NAVIGATION,
-	APP_STACK_NAVIGATION
+	E_APP_DRAWER_NAVIGATION,
+	E_APP_STACK_NAVIGATION
 } from '@/features/app/constants'
 
 const HomeScreen = memo(({ navigation }: THomeProps) => {
@@ -31,7 +31,7 @@ const HomeScreen = memo(({ navigation }: THomeProps) => {
 					<Column w='1/2'>
 						<AppButton
 							onPress={(): void =>
-								navigation.navigate(APP_STACK_NAVIGATION.ENTRY_POINT)
+								navigation.navigate(E_APP_STACK_NAVIGATION.ENTRY_POINT)
 							}
 						>
 							Go To Entry Point
@@ -40,7 +40,7 @@ const HomeScreen = memo(({ navigation }: THomeProps) => {
 					<Column w='1/2'>
 						<AppButton
 							onPress={(): void =>
-								navigation.navigate(APP_DRAWER_NAVIGATION.OPTION_PARENT)
+								navigation.navigate(E_APP_DRAWER_NAVIGATION.OPTION_PARENT)
 							}
 						>
 							Go To Option

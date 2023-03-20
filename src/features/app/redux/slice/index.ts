@@ -12,7 +12,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { IRootState } from '@/plugins/redux/reducer'
 
 // App Features
-import { APP_LANGUAGE } from '@/features/app/constants'
+import { E_APP_LANGUAGE } from '@/features/app/constants'
 
 // i18n
 import i18n from 'i18next'
@@ -20,7 +20,7 @@ import i18n from 'i18next'
 const initialState: IAppSliceState = {
 	isInitialized: false,
 	counter: 0,
-	language: APP_LANGUAGE.EN
+	language: E_APP_LANGUAGE.EN
 }
 
 const appSlice = createSlice({
@@ -41,7 +41,7 @@ const appSlice = createSlice({
 		},
 		app_HANDLE_LANGUAGE: (
 			state,
-			{ payload }: PayloadAction<APP_LANGUAGE>
+			{ payload }: PayloadAction<E_APP_LANGUAGE>
 		): void => {
 			state.language = payload
 			i18n.changeLanguage(payload)
