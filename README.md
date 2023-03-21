@@ -177,10 +177,12 @@ Project structure for this react native starter
 |   |____________ui               // Contain UI / View for the app
 |   |____________utils            // Contain utility that reusable for another component or it-self
 |   |
-|   |______test                   // Contain all about test, especially setup for jest
 |   |
 |   |______{another}              // Another features, the content same as above.
 |
+|___plugins                       // Contain all about third party packages
+|___test                          // Contain all about test, especially setup for jest
+
 ```
 
 If you want to create folder outside declared above, you can create, but, don't forget to update this docs.
