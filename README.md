@@ -12,13 +12,15 @@ This application use:
 - gradle: 7.3.1
 - minSdkVersion: 21 (android >= v5)
 - Visual Studio Code
-- Flipper 0.184.0 (have problem when install inside Mac? refer to [References](#references))
+- Flipper (have problem when install inside Mac? refer to [References](#references))
 
 ---
 
 ## Starter Introduction
 
-This application use DDD pattern. Here you can learn a little about DDD pattern, [Visit me](https://www.geeksforgeeks.org/domain-driven-design-ddd)
+![React Native DDD Architecture](./react-native-architecture.png)
+
+If you want have technical understanding not theory, just visit this [Medium Article about DDD structure in React](https://medium.com/@hassan.djirdeh/domain-driven-react-redux-a474ecf7d126)
 
 ---
 
@@ -39,6 +41,9 @@ These are major dependencies that we used for develop:
 - [async-storage](https://react-native-async-storage.github.io/async-storage/docs/install/) ^1.17.11
 - [i18n](https://react.i18next.com/getting-started) ^22.4.11
 - [react-i18n](https://react.i18next.com/getting-started) ^12.2.0
+- [react-hook-form](https://react-hook-form.com/) ^7.43.7
+- [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers) ^3.0.0
+- [yup](https://github.com/jquense/yup) ^1.02
 
 ## Dev Dependencies
 
@@ -63,10 +68,6 @@ yarn
 
 ```shell
 pod install
-
-# or
-
-npx pod-install ios
 ```
 
 ---
@@ -90,6 +91,18 @@ Build Android
 ```shell
 yarn android
 ```
+
+---
+
+## Available commands for build android
+
+Build android debug
+
+```shell
+yarn android:debug
+```
+
+File located at `/android/app/build/outputs/apk/debug/app-debug.apk`
 
 ---
 
@@ -147,6 +160,28 @@ As the name suggests, this command will generate a coverage report.
 
 ```shell
 yarn test:coverage
+```
+
+---
+
+## Available commands for versioning
+
+Upgrade last semantic versioning 0.0.(0 <-- this)
+
+```shell
+yarn version:patch
+```
+
+Upgrade middle semantic versioning 0.(0 <--- this).0
+
+```shell
+yarn version:minor
+```
+
+Upgrade middle semantic versioning (0 <--- this).0.0
+
+```shell
+yarn version:major
 ```
 
 ---
@@ -382,9 +417,8 @@ Folder Structure Part 5 (End)
 // Easy diagram to define this folder structure, just like this:
 
 |___app
-|______ui
+|______screens
 |_________index.ts                          // Entry point for the app pages
-|_________components                        // If you have component that related to home feature
 |_________YouComponentName                  // Your component
 |____________index.tsx
 |____________interfaces.ts                  // if you have scoped interfaces
@@ -435,3 +469,4 @@ These are some references when we build this starter:
 - [Flipper cannot be opened in Mac](https://stackoverflow.com/questions/61182996/flipper-cannot-be-opened-because-the-developer-cannot-be-verified-in-macos-catal)
 - [Debug React Native with Flipper](https://javascript.plainenglish.io/how-to-debug-redux-in-react-native-using-flipper-d785b46cf7bf)
 - [React Native jest setup](https://www.reactnative.guide/7-testing/7.1-jest-setup.html)
+- [Reduce React Native size](https://algerwrites.medium.com/how-to-reduce-react-native-application-app-apk-abb-size-using-these-simple-steps-3261b25e7288)

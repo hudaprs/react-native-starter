@@ -1,11 +1,14 @@
 // Redux Toolkit
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/query/react'
 
+// Env
+import { API_BASE } from '@env'
+
 // Plugins
 // import { IRootState } from '@/plugins/redux/reducer'
 
 const baseQuery = fetchBaseQuery({
-	baseUrl: '',
+	baseUrl: API_BASE,
 	prepareHeaders(headers, { getState }) {
 		// const rootState = getState() as IRootState
 

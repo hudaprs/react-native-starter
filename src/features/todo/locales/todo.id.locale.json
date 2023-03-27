@@ -1,0 +1,13 @@
+{
+	"todo": {
+		"form": {
+			"title": "Judul"
+		},
+		"formPlaceholder": {
+			"title": "Apa yang ingin anda lakukan selanjutnya..."
+		},
+		"alert": {
+			"stored": "Todo berhasil dibuat"
+		}
+	}
+}

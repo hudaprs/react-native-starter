@@ -1,0 +1,13 @@
+{
+	"todo": {
+		"form": {
+			"title": "Title"
+		},
+		"formPlaceholder": {
+			"title": "What you want to do next..."
+		},
+		"alert": {
+			"stored": "Todo successfully created"
+		}
+	}
+}

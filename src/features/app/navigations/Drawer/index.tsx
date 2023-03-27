@@ -5,7 +5,10 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import { HomeStackNavigation } from '@/features/home/navigations'
 
 // Option Navigation
-import { OptionStackNavigation } from '@/features/options/navigations/Stack'
+import { OptionStackNavigation } from '@/features/options/navigations'
+
+// Todo Navigation
+import { TodoStackNavigation } from '@/features/todo/navigations'
 
 // i18n
 import { useTranslation } from 'react-i18next'
@@ -32,6 +35,11 @@ const AppDrawerNavigation = (): JSX.Element => {
 				name={E_APP_DRAWER_NAVIGATION.OPTION_PARENT}
 				component={OptionStackNavigation}
 				options={{ title: t('app.menu.options') as string }}
+			/>
+			<Drawer.Screen
+				name={E_APP_DRAWER_NAVIGATION.TODO_PARENT}
+				component={TodoStackNavigation}
+				options={{ title: t('app.menu.todo') as string }}
 			/>
 		</Drawer.Navigator>
 	)

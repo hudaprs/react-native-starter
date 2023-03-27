@@ -12,10 +12,10 @@ import { useTranslation } from 'react-i18next'
 
 // Constants
 import {
-	APP_LANGUAGE,
+	E_APP_LANGUAGE,
 	APP_LANGUAGE_LIST,
-	APP_STACK_NAVIGATION,
-	APP_DRAWER_NAVIGATION
+	E_APP_STACK_NAVIGATION,
+	E_APP_DRAWER_NAVIGATION
 } from '@/features/app/constants'
 
 // Plugins
@@ -53,7 +53,7 @@ const OptionScreen = memo(({ navigation }: TOptionProps) => {
 						}}
 						mt='1'
 						onValueChange={(language: string): void => {
-							dispatch(app_HANDLE_LANGUAGE(language as APP_LANGUAGE))
+							dispatch(app_HANDLE_LANGUAGE(language as E_APP_LANGUAGE))
 						}}
 					>
 						{APP_LANGUAGE_LIST.map(language => (
@@ -70,7 +70,7 @@ const OptionScreen = memo(({ navigation }: TOptionProps) => {
 					<Column w='1/2'>
 						<AppButton
 							onPress={(): void =>
-								navigation.navigate(APP_STACK_NAVIGATION.ENTRY_POINT)
+								navigation.navigate(E_APP_STACK_NAVIGATION.ENTRY_POINT)
 							}
 						>
 							Go To Entry Point
@@ -79,7 +79,7 @@ const OptionScreen = memo(({ navigation }: TOptionProps) => {
 					<Column w='1/2'>
 						<AppButton
 							onPress={(): void =>
-								navigation.navigate(APP_DRAWER_NAVIGATION.HOME_PARENT)
+								navigation.navigate(E_APP_DRAWER_NAVIGATION.HOME_PARENT)
 							}
 						>
 							Go To Home

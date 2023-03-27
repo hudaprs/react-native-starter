@@ -63,6 +63,5 @@ yarn-error.log
 .metro-health-check*
 
 # ETC
-yarn.lock
 coverage 
 cache
