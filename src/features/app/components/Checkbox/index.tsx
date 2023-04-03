@@ -2,12 +2,12 @@
 import { memo } from 'react'
 
 // Interfaces
-import { IAppCheckboxProps } from './interfaces'
+import { TAppCheckboxProps } from './types'
 
 // Native Base
 import { Checkbox } from 'native-base'
 
-const AppCheckbox = memo((props: IAppCheckboxProps) => {
+const AppCheckbox = memo((props: TAppCheckboxProps) => {
 	return <Checkbox {...props} />
 })
 

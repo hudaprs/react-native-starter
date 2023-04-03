@@ -8,7 +8,7 @@ import { HomeScreen } from '@/features/home/screens'
 import { E_HOME_STACK_NAVIGATION } from '@/features/app/constants'
 
 // Interfaces
-import { THomeStackNavigationParams } from './interfaces'
+import { THomeStackNavigationParams } from './types'
 
 const Stack = createNativeStackNavigator<THomeStackNavigationParams>()
 const HomeStackNavigation = (): JSX.Element => {

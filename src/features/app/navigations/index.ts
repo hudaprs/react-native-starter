@@ -1,4 +1,4 @@
 export * from './Drawer'
-export * from './Drawer/interfaces'
+export * from './Drawer/types'
 export * from './Stack'
-export * from './Stack/interfaces'
+export * from './Stack/types'

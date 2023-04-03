@@ -3,7 +3,7 @@ import {
 	IAppSliceHandleCounterAttrs,
 	EAppSliceHandleCounterType,
 	IAppSliceState
-} from './interfaces'
+} from './types'
 
 // Redux Toolkit
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'

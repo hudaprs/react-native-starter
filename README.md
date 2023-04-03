@@ -18,6 +18,8 @@ This application use:
 
 ## Starter Introduction
 
+![React Native Starter Preview](./react-native-preview.gif)
+
 ![React Native DDD Architecture](./react-native-architecture.png)
 
 If you want have technical understanding not theory, just visit this [Medium Article about DDD structure in React](https://medium.com/@hassan.djirdeh/domain-driven-react-redux-a474ecf7d126)
@@ -55,6 +57,12 @@ These are additional dependencies that we use for develop:
 - [prettier](https://prettier.io) ^2.8.4
 
 ---
+
+## Change Application Name
+
+```
+npx react-native-rename "New Application Name"
+```
 
 ## Installation
 
@@ -206,6 +214,7 @@ Project structure for this react native starter
 |   |____________components       // Contain components
 |   |____________constants        // Contain static value / constant
 |   |____________hooks            // Contain custom hooks
+|   |____________types            // Contain types for feature
 |   |____________locales          // Contain localization
 |   |____________redux            // Contain redux / state management
 |   |____________navigation       // Contain routing, according feature

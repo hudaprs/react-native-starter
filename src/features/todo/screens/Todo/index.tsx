@@ -23,7 +23,7 @@ import {
 
 // Interfaces
 import { TTodoProps } from './interfaces'
-import { ITodoForm } from '@/features/todo/interfaces'
+import { ITodoForm } from '@/features/todo/types'
 
 // Constants
 import { TODO_FORM } from '@/features/todo/constants'

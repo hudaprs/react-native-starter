@@ -1,3 +1,3 @@
 export * from './slice'
-export * from './slice/interfaces'
+export * from './slice/types'
 export * from './rtk'

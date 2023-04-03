@@ -8,7 +8,7 @@ import { AppDrawerNavigation } from '@/features/app/navigations/Drawer'
 import { AppScreen, AppSplashScreen } from '@/features/app/screens'
 
 // Interfaces
-import { TAppRootStackNavigationParams } from './interfaces'
+import { TAppRootStackNavigationParams } from './types'
 
 // Constants
 import { E_APP_STACK_NAVIGATION } from '@/features/app/constants'

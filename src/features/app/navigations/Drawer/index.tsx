@@ -14,7 +14,7 @@ import { TodoStackNavigation } from '@/features/todo/navigations'
 import { useTranslation } from 'react-i18next'
 
 // Interfaces
-import { TAppDrawerNavigationParams } from './interfaces'
+import { TAppDrawerNavigationParams } from './types'
 
 // Constants
 import { E_APP_DRAWER_NAVIGATION } from '@/features/app/constants'

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { View } from 'react-native'
 
 // Interfaces
-import { IAppViewProps } from '@/features/app/components/View/interfaces'
+import { IAppViewProps } from '@/features/app/components/View/types'
 
 export const StyledView = styled(View)<IAppViewProps>`
 	flex-direction: ${(props): string => props?.flexDirection || 'column'};

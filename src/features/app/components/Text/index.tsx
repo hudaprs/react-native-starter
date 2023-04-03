@@ -2,12 +2,12 @@
 import { memo } from 'react'
 
 // Interfaces
-import { IAppTextProps } from './interfaces'
+import { TAppTextProps } from './types'
 
 // Components
 import { StyledText } from './components'
 
-const AppText = memo(({ children, ...rest }: IAppTextProps) => {
+const AppText = memo(({ children, ...rest }: TAppTextProps) => {
 	return <StyledText {...rest}>{children}</StyledText>
 })
 

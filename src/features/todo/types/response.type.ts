@@ -1,6 +1,6 @@
 // Interfaces
 // import { IAppResponse, IAppResponsePagination } from '@/features/app/interfaces'
-import { ITodo } from './todo.interface'
+import { ITodo } from './todo.type'
 
 // NOTE: If you integrating to BE, recommended to use response wrapper
 // export type ITodoResponseList = IAppResponsePagination<ITodo[]>

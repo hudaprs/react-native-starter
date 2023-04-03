@@ -1,5 +1,5 @@
 // Interfaces
-import { IAppCommonPagination } from '@/features/app/interfaces'
+import { IAppCommonPagination } from '@/features/app/types'
 
 export interface IAppResponse<T = unknown> {
 	message: string

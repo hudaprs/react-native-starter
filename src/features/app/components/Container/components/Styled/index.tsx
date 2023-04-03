@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { View } from 'react-native'
 
 // Interfaces
-import { IAppContainerProps } from '@/features/app/components/Container/interfaces'
+import { IAppContainerProps } from '@/features/app/components/Container/types'
 
 export const StyledView = styled(View)<IAppContainerProps>`
 	height: 100%;

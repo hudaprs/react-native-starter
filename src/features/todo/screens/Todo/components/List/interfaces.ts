@@ -1,5 +1,5 @@
 // Interfaces
-import { ITodoResponseList } from '@/features/todo/interfaces'
+import { ITodoResponseList } from '@/features/todo/types'
 
 export interface IListProps {
 	list: ITodoResponseList

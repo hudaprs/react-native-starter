@@ -1,5 +1,5 @@
 // Interfaces
-import { ITodoForm } from '@/features/todo/interfaces'
+import { ITodoForm } from '@/features/todo/types'
 
 export const TODO_FORM: ITodoForm = {
 	title: '',

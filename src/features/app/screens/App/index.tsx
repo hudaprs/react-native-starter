@@ -24,7 +24,7 @@ import { useAppDispatch, useAppSelector } from '@/plugins'
 import { useTranslation } from 'react-i18next'
 
 // Interfaces
-import { TAppProps } from './interfaces'
+import { TAppProps } from './types'
 
 // Constants
 import { E_APP_STACK_NAVIGATION } from '@/features/app/constants'

@@ -10,7 +10,7 @@ import {
 } from '@/features/app/components'
 
 // Interfaces
-import { THomeProps } from './interfaces'
+import { THomeProps } from './types'
 
 // Native Base
 import { Row, Column } from 'native-base'

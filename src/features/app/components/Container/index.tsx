@@ -2,7 +2,7 @@
 import { memo } from 'react'
 
 // Interfaces
-import { IAppContainerProps } from './interfaces'
+import { IAppContainerProps } from './types'
 
 // Components
 import { StyledView } from './components'

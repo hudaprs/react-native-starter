@@ -1,5 +1,6 @@
 // Redux Toolkit
 import { configureStore, createListenerMiddleware } from '@reduxjs/toolkit'
+import { setupListeners } from '@reduxjs/toolkit/dist/query'
 
 // React Redux
 import { useDispatch, useSelector } from 'react-redux'
@@ -67,6 +68,9 @@ const store = configureStore({
 		return middleware
 	}
 })
+
+// Setup listeners to make use of feature inside RTK
+setupListeners(store.dispatch)
 
 // Store that persisted
 const persistor = persistStore(store)

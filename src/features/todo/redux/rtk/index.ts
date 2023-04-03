@@ -5,11 +5,11 @@ import {
 	ITodoAttrsShow,
 	ITodoAttrsUpdate,
 	ITodoAttrsDestroy
-} from '@/features/todo/interfaces/attrs.interface'
+} from '@/features/todo/types/attrs.type'
 import {
 	ITodoResponseList,
 	ITodoResponseDetail
-} from '@/features/todo/interfaces/response.interface'
+} from '@/features/todo/types/response.type'
 
 // Rtk
 import { emptySplitApi } from '@/features/app/redux'

@@ -2,7 +2,7 @@
 import { memo } from 'react'
 
 // Interfaces
-import { IAppWrapperProps } from './interfaces'
+import { IAppWrapperProps } from './types'
 
 // Components
 import { StyledSafeAreaView } from './components'

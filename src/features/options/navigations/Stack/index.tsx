@@ -8,7 +8,7 @@ import { OptionScreen } from '@/features/options/screens'
 import { E_OPTION_STACK_NAVIGATION } from '@/features/app/constants'
 
 // Interfaces
-import { TOptionStackNavigationParams } from './interfaces'
+import { TOptionStackNavigationParams } from './types'
 
 const Stack = createNativeStackNavigator<TOptionStackNavigationParams>()
 const OptionStackNavigation = (): JSX.Element => {

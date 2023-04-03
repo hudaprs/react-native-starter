@@ -5,9 +5,9 @@ import { memo } from 'react'
 import { StyledButton } from './components'
 
 // Interfaces
-import { IAppButtonProps } from './interfaces'
+import { TAppButtonProps } from './types'
 
-const AppButton = memo(({ children, ...rest }: IAppButtonProps) => {
+const AppButton = memo(({ children, ...rest }: TAppButtonProps) => {
 	return <StyledButton {...rest}>{children}</StyledButton>
 })
 

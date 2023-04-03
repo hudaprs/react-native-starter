@@ -2,7 +2,7 @@
 import { forwardRef } from 'react'
 
 // Interfaces
-import { IAppInputProps } from './interfaces'
+import { IAppInputProps } from './types'
 
 // Native Base
 import { FormControl, Input } from 'native-base'

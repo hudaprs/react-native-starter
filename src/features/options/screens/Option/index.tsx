@@ -25,7 +25,7 @@ import { useAppSelector, useAppDispatch } from '@/plugins'
 import { appGetLanguage, app_HANDLE_LANGUAGE } from '@/features/app/redux'
 
 // Interfaces
-import { TOptionProps } from './interfaces'
+import { TOptionProps } from './types'
 
 const OptionScreen = memo(({ navigation }: TOptionProps) => {
 	// Translation
