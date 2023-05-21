@@ -226,6 +226,7 @@ Project structure for this react native starter
 |
 |___plugins                       // Contain all about third party packages
 |___test                          // Contain all about test, especially setup for jest
+|___types                         // Contain all about type definition (global type definition)
 
 ```
 

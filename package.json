@@ -20,9 +20,9 @@
 		"test:update": "jest --verbose --coverage --updateSnapshot",
 		"test:watch": "jest --verbose --watch",
 		"test:coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html",
-		"version:patch": "yarn version --patch --no-commit-hooks -m \"chore(version): %s\"",
-		"version:minor": "yarn version --minor --no-commit-hooks -m \"chore(version): %s\"",
-		"version:major": "yarn version --major --no-commit-hooks -m \"chore(version): %s\"",
+		"version:patch": "yarn version --patch && yarn config set version-git-message \"chore(version): patch %s\"",
+		"version:minor": "yarn version --minor && yarn config set version-git-message \"chore(version): minor %s\"",
+		"version:major": "yarn version --major && yarn config set version-git-message \"chore(version): major %s\"",
 		"postversion": "react-native-version"
 	},
 	"dependencies": {
@@ -38,7 +38,7 @@
 		"react": "18.2.0",
 		"react-hook-form": "^7.43.7",
 		"react-i18next": "^12.2.0",
-		"react-native": "0.71.4",
+		"react-native": "0.71.7",
 		"react-native-dotenv": "^3.4.8",
 		"react-native-flipper": "^0.184.0",
 		"react-native-gesture-handler": "^2.9.0",
@@ -106,8 +106,8 @@
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
-			"yarn lint:fix",
-			"yarn lint:format"
+			"yarn lint:format",
+			"yarn lint"
 		]
 	}
 }
