@@ -9,7 +9,7 @@ import { API_BASE } from '@env'
 
 const baseQuery = fetchBaseQuery({
 	baseUrl: API_BASE,
-	prepareHeaders(headers, { getState }) {
+	prepareHeaders(headers) {
 		// const rootState = getState() as IRootState
 
 		// Handle if you have any header send to the server

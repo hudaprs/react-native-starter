@@ -22,7 +22,7 @@ import {
 } from '@/features/todo/redux'
 
 // Interfaces
-import { TTodoProps } from './interfaces'
+// import { TTodoProps } from './interfaces'
 import { ITodoForm } from '@/features/todo/types'
 
 // Constants
@@ -42,7 +42,7 @@ const validationSchema = yup
 	})
 	.required()
 
-const TodoScreen = memo((_: TTodoProps) => {
+const TodoScreen = memo(() => {
 	// Translation
 	const { t } = useTranslation()
 
